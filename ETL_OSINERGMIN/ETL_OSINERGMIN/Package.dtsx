@@ -1,0 +1,1060 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/29/2020 3:15:33 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RMAB-PC"
+  DTS:CreatorName="RMAB-PC\MARCELO"
+  DTS:DTSID="{DEF99607-9207-47D6-92C8-EFA999DDCBB4}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="10250"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{01B4F3F8-969A-4F40-AC6C-AB53C9B85877}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.arte.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{222F82CF-2AEE-4C8E-906D-C475CD4D2107}"
+      DTS:ObjectName="LocalHost.arte.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;User ID=sa;Initial Catalog=arte;Provider=SQLNCLI11.1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.arte.sa 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6D269E97-8243-4F9D-BEEA-11528BFD059A}"
+      DTS:ObjectName="LocalHost.arte.sa 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;User ID=sa;Initial Catalog=arte;Provider=SQLNCLI11.1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.arte.usersample1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{96AFE7F3-7D61-46FC-AB06-D81BEE578A12}"
+      DTS:ObjectName="LocalHost.arte.usersample1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;User ID=usersample;Initial Catalog=arte;Provider=SQLNCLI11.1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Cargar Dim Sector"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{FCD37F2E-C9BD-4F00-942F-D234F6410836}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Cargar Dim Sector"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Cargar Dim Sucursal"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{FB7FF319-FA88-408B-92E9-D4EB6B67ECB3}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Cargar Dim Sucursal"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Cargar Dim Tiempo"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{0FA88BEF-DD18-48A9-81C5-6F2386355B2D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Cargar Dim Tiempo"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Cargar Dim Ubigeo"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{362706B9-6B9D-4B62-9F23-723463892E57}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Cargar Dim Ubigeo"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Cargar Problema"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D8BF2EB4-984E-4971-BBF6-B5E974642ED1}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Cargar Problema"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{05F6B7E3-A642-4994-B9C5-D946E620B5EB}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\ADO NET Destination"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="ADO NET Destination"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"osinerg.denuncias"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\ADO NET Destination.Connections[IDbConnection]"
+                  connectionManagerID="{1EBC4FAA-7DC5-40D6-B8E1-DA79BD99ECEF}:invalid"
+                  connectionManagerRefId="{1EBC4FAA-7DC5-40D6-B8E1-DA79BD99ECEF}:invalid"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Fecha de registro]"
+                      cachedDataType="date"
+                      cachedName="Fecha de registro"
+                      externalMetadataColumnId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Fecha de registro]"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Fecha de registro]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[DNI]"
+                      cachedDataType="r8"
+                      cachedName="DNI"
+                      externalMetadataColumnId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[DNI]"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[DNI]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Nombre ]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Nombre "
+                      externalMetadataColumnId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Nombre ]"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Nombre ]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Apellido Paterno]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Apellido Paterno"
+                      externalMetadataColumnId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Apellido Paterno]"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Apellido Paterno]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Apellido Materno]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Apellido Materno"
+                      externalMetadataColumnId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Apellido Materno]"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Apellido Materno]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Telefono]"
+                      cachedDataType="r8"
+                      cachedName="Telefono"
+                      externalMetadataColumnId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Telefono]"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Telefono]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Sector]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Sector"
+                      externalMetadataColumnId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Sector]"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Sector]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Tipo Denuncia]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Tipo Denuncia"
+                      externalMetadataColumnId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Tipo Denuncia]"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Tipo Denuncia]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Canal]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Canal"
+                      externalMetadataColumnId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Canal]"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Canal]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Departamento ]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Departamento "
+                      externalMetadataColumnId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Departamento ]"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Departamento ]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Provincia ]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Provincia "
+                      externalMetadataColumnId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Provincia ]"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Provincia ]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Distrito]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Distrito"
+                      externalMetadataColumnId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Distrito]"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Distrito]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Fecha de Atenciòn]"
+                      cachedDataType="date"
+                      cachedName="Fecha de Atenciòn"
+                      externalMetadataColumnId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Fecha de Atenciòn]"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Fecha de Atenciòn]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Fecha de registro]"
+                      dataType="dbTimeStamp"
+                      name="Fecha de registro" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[DNI]"
+                      dataType="r8"
+                      name="DNI" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Nombre ]"
+                      dataType="wstr"
+                      length="255"
+                      name="Nombre " />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Apellido Paterno]"
+                      dataType="wstr"
+                      length="255"
+                      name="Apellido Paterno" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Apellido Materno]"
+                      dataType="wstr"
+                      length="255"
+                      name="Apellido Materno" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Telefono]"
+                      dataType="r8"
+                      name="Telefono" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Sector]"
+                      dataType="wstr"
+                      length="255"
+                      name="Sector" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Tipo Denuncia]"
+                      dataType="wstr"
+                      length="255"
+                      name="Tipo Denuncia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Canal]"
+                      dataType="wstr"
+                      length="255"
+                      name="Canal" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Departamento ]"
+                      dataType="wstr"
+                      length="255"
+                      name="Departamento " />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Provincia ]"
+                      dataType="wstr"
+                      length="255"
+                      name="Provincia " />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Distrito]"
+                      dataType="wstr"
+                      length="255"
+                      name="Distrito" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Fecha de Atenciòn]"
+                      dataType="dbTimeStamp"
+                      name="Fecha de Atenciòn" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\RECLAMOS"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="RECLAMOS"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">DENUNCIAS$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\RECLAMOS.Connections[OleDbConnection]"
+                  connectionManagerID="{11AEE411-C840-44E2-9BE4-FBA76C4D4C5E}:invalid"
+                  connectionManagerRefId="{11AEE411-C840-44E2-9BE4-FBA76C4D4C5E}:invalid"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Fecha de registro]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Fecha de registro]"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Fecha de registro]"
+                      name="Fecha de registro"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[DNI]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[DNI]"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[DNI]"
+                      name="DNI"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Nombre ]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Nombre ]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Nombre ]"
+                      name="Nombre "
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Apellido Paterno]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Apellido Paterno]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Apellido Paterno]"
+                      name="Apellido Paterno"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Apellido Materno]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Apellido Materno]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Apellido Materno]"
+                      name="Apellido Materno"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Telefono]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Telefono]"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Telefono]"
+                      name="Telefono"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Sector]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Sector]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Sector]"
+                      name="Sector"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Tipo Denuncia]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Tipo Denuncia]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Tipo Denuncia]"
+                      name="Tipo Denuncia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Canal]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Canal]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Canal]"
+                      name="Canal"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Departamento ]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Departamento ]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Departamento ]"
+                      name="Departamento "
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Provincia ]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Provincia ]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Provincia ]"
+                      name="Provincia "
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Distrito]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Distrito]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Distrito]"
+                      name="Distrito"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Fecha de Atenciòn]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Fecha de Atenciòn]"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].Columns[Fecha de Atenciòn]"
+                      name="Fecha de Atenciòn"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Fecha de registro]"
+                      dataType="date"
+                      name="Fecha de registro" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[DNI]"
+                      dataType="r8"
+                      name="DNI" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Nombre ]"
+                      dataType="wstr"
+                      length="255"
+                      name="Nombre " />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Apellido Paterno]"
+                      dataType="wstr"
+                      length="255"
+                      name="Apellido Paterno" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Apellido Materno]"
+                      dataType="wstr"
+                      length="255"
+                      name="Apellido Materno" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Telefono]"
+                      dataType="r8"
+                      name="Telefono" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Sector]"
+                      dataType="wstr"
+                      length="255"
+                      name="Sector" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Tipo Denuncia]"
+                      dataType="wstr"
+                      length="255"
+                      name="Tipo Denuncia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Canal]"
+                      dataType="wstr"
+                      length="255"
+                      name="Canal" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Departamento ]"
+                      dataType="wstr"
+                      length="255"
+                      name="Departamento " />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Provincia ]"
+                      dataType="wstr"
+                      length="255"
+                      name="Provincia " />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Distrito]"
+                      dataType="wstr"
+                      length="255"
+                      name="Distrito" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output].ExternalColumns[Fecha de Atenciòn]"
+                      dataType="date"
+                      name="Fecha de Atenciòn" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Fecha de registro]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Fecha de registro]"
+                      name="Fecha de registro" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[DNI]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[DNI]"
+                      name="DNI" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Nombre ]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Nombre ]"
+                      name="Nombre " />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Apellido Paterno]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Apellido Paterno]"
+                      name="Apellido Paterno" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Apellido Materno]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Apellido Materno]"
+                      name="Apellido Materno" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Telefono]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Telefono]"
+                      name="Telefono" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Sector]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Sector]"
+                      name="Sector" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Tipo Denuncia]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Tipo Denuncia]"
+                      name="Tipo Denuncia" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Canal]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Canal]"
+                      name="Canal" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Departamento ]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Departamento ]"
+                      name="Departamento " />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Provincia ]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Provincia ]"
+                      name="Provincia " />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Distrito]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Distrito]"
+                      name="Distrito" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Fecha de Atenciòn]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[Fecha de Atenciòn]"
+                      name="Fecha de Atenciòn" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output]"
+              endId="Package\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\RECLAMOS.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{4665090A-66D0-4100-A440-B9C079A3F159}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{1EBC4FAA-7DC5-40D6-B8E1-DA79BD99ECEF}"
+          SQLTask:SqlStatementSource="DROP TABLE [dbo].FACT_DENUNCIA &#xA;DROP TABLE [dbo].DIM_UBIGEO&#xA;DROP TABLE [dbo].DIM_TIEMPO&#xA;DROP TABLE [dbo].DIM_PROBLEMA&#xA;DROP TABLE [dbo].DIM_SECTOR&#xA;DROP TABLE [dbo].DIM_SUCURSAL&#xA;DROP TABLE [dbo].DIM_CLIENTE&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{CE99A1AF-93F2-43EA-A582-46E220E2D951}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Cargar Problema" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{DE1E1129-EC0F-4494-9D1C-1B9F0AC9F144}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 1"
+      DTS:To="Package\Cargar Dim Sector" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{47B648B9-0EAB-4BC5-8D2F-E954C02664ED}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 2"
+      DTS:To="Package\Cargar Dim Sucursal" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{74EBB6AE-7E66-45C1-A744-74759DD8624D}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 3"
+      DTS:To="Package\Cargar Dim Ubigeo" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{4A1040A1-15B9-4B6C-9842-127E7272A3A5}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 4"
+      DTS:To="Package\Cargar Dim Tiempo" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Cargar Dim Sector"
+          TopLeft="177.714285779668,166.588235312886" />
+        <NodeLayout
+          Size="175.2,41.6"
+          Id="Package\Cargar Dim Sucursal"
+          TopLeft="348.714285588081,166.235294129712" />
+        <NodeLayout
+          Size="169.6,41.6"
+          Id="Package\Cargar Dim Tiempo"
+          TopLeft="710.000000649265,165.117646962301" />
+        <NodeLayout
+          Size="168,41.6"
+          Id="Package\Cargar Dim Ubigeo"
+          TopLeft="532.714285981898,165.529411717785" />
+        <NodeLayout
+          Size="158.4,41.6"
+          Id="Package\Cargar Problema"
+          TopLeft="10.7142854390703,166.352941137593" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="426.285714241619,273.764705870288" />
+        <NodeLayout
+          Size="163.2,41.6"
+          Id="Package\Execute SQL Task"
+          TopLeft="364.000000478965,18.8235294425982" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="393.866667145632,60.4235294425982">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-303.952381706562,105.929411694995"
+              Start="0,0"
+              End="-303.952381706562,98.4294116949953">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.3830002627738" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.3830002627738"
+                    Point2="0,28.3830002627738"
+                    Point3="-4,28.3830002627738" />
+                  <mssgle:LineSegment
+                    End="-299.952381706562,28.3830002627738" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-299.952381706562,28.3830002627738"
+                    Point2="-303.952381706562,28.3830002627738"
+                    Point3="-303.952381706562,32.3830002627738" />
+                  <mssgle:LineSegment
+                    End="-303.952381706562,98.4294116949953" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="419.733333812299,60.4235294425982">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-159.61904803263,106.164705870288"
+              Start="0,0"
+              End="-159.61904803263,98.6647058702877">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.084317527942" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39.084317527942"
+                    Point2="0,43.084317527942"
+                    Point3="-4,43.084317527942" />
+                  <mssgle:LineSegment
+                    End="-155.61904803263,43.084317527942" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-155.61904803263,43.084317527942"
+                    Point2="-159.61904803263,43.084317527942"
+                    Point3="-159.61904803263,47.084317527942" />
+                  <mssgle:LineSegment
+                    End="-159.61904803263,98.6647058702877" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 2]"
+          TopLeft="445.600000478965,60.4235294425982">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9.28571489088415,105.811764687114"
+              Start="0,0"
+              End="-9.28571489088415,98.3117646871142">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.9058823435571" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,48.9058823435571"
+                    Point2="0,52.9058823435571"
+                    Point3="-4,52.9058823435571" />
+                  <mssgle:LineSegment
+                    End="-5.28571489088415,52.9058823435571" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.28571489088415,52.9058823435571"
+                    Point2="-9.28571489088415,52.9058823435571"
+                    Point3="-9.28571489088415,56.9058823435571" />
+                  <mssgle:LineSegment
+                    End="-9.28571489088415,98.3117646871142" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 3]"
+          TopLeft="471.466667145632,60.4235294425982">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="145.247618836266,105.105882275187"
+              Start="0,0"
+              End="145.247618836266,97.6058822751872">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.6546201854643" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.6546201854643"
+                    Point2="0,42.6546201854643"
+                    Point3="4,42.6546201854643" />
+                  <mssgle:LineSegment
+                    End="141.247618836266,42.6546201854643" />
+                  <mssgle:CubicBezierSegment
+                    Point1="141.247618836266,42.6546201854643"
+                    Point2="145.247618836266,42.6546201854643"
+                    Point3="145.247618836266,46.6546201854643" />
+                  <mssgle:LineSegment
+                    End="145.247618836266,97.6058822751872" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 4]"
+          TopLeft="497.333333812299,60.4235294425982">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="297.466666836966,104.694117519703"
+              Start="0,0"
+              End="297.466666836966,97.1941175197029">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.0520123497768" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.0520123497768"
+                    Point2="0,28.0520123497768"
+                    Point3="4,28.0520123497768" />
+                  <mssgle:LineSegment
+                    End="293.466666836966,28.0520123497768" />
+                  <mssgle:CubicBezierSegment
+                    Point1="293.466666836966,28.0520123497768"
+                    Point2="297.466666836966,28.0520123497768"
+                    Point3="297.466666836966,32.0520123497768" />
+                  <mssgle:LineSegment
+                    End="297.466666836966,97.1941175197029" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="131.2,41.6"
+          Id="Package\Data Flow Task\RECLAMOS"
+          TopLeft="70,57.2352941183174" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Data Flow Task\ADO NET Destination"
+          TopLeft="53,146" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output]"
+          TopLeft="139.1,98.8352941183174">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.1647058816826"
+              Start="0,0"
+              End="0,39.6647058816826">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.6647058816826" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\RECLAMOS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
